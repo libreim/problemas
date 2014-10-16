@@ -167,11 +167,17 @@ Problemas planteados en el seminario} % Subtitle
 %  Definiciones de problemas
 %----------------------------------------------------------------------------------------
 \newcounter{solcounter}
+\newcounter{prbcounter}
+\numberwithin{prbcounter}{section}
 \renewcommand{\thesolcounter}{\arabic{solcounter}}
+\renewcommand{\theprbcounter}{\arabic{prbcounter}}
 
 \NewDocumentEnvironment{enunciado}{mm}{
+  \hrule
   \bfseries
+  \refstepcounter{prbcounter}
   \setcounter{solcounter}{0}
+  Problema \theprbcounter. \\
 }
 {\mdseries\itshape \begin{flushright} Propuesto por: {#1} \\ Temas: {#2} \end{flushright}}
 
@@ -213,34 +219,81 @@ Problemas planteados en el seminario} % Subtitle
 
   % Este es un problema de prueba.
   % Todos los problemas deberían seguir este mismo formato.
-  %  * El título del problema se coloca como título de subsección.
   %  * El enunciado se deja dentro de su entorno \begin{enunciado}
   %  * El autor y el tema se pasan como argumentos al enunciado
   %  * La solución se deja dentro de su entorno \begin{solucion}
   %  * El autor se pasa como argumento a la solución
-  \subsection{Problema de prueba}
-    \begin{enunciado}{Nombre1, Nombre2}{Análisis}
-      Este problema es de prueba. El resto de problemas deberán seguir este formato.
-      \begin{gather*}
-       \int^\infty_0 t^{x-1} e^{-t} dt
-      \end{gather*}
-    \end{enunciado}
+  
+  \begin{enunciado}{Nombre1, Nombre2}{Análisis}
+    Este problema es de prueba. El resto de problemas deberán seguir este formato.
+    \begin{gather*}
+      \int^\infty_0 t^{x-1} e^{-t} dt
+    \end{gather*}
+  \end{enunciado}
 
-    \begin{solucion}{Nombre2}
-     Esta es una solución de prueba. 
-    \end{solucion}
+  \begin{solucion}{Nombre2}
+    Esta es una solución de prueba. 
+  \end{solucion}
 
-  \subsection{Emma and sum of products}
-    \begin{enunciado}{Andrés Herrera}{Programación}
-      Problema en Hackerrank:
-     \url{https://www.hackerrank.com/contests/infinitum-aug14/challenges/emma-and-sum-of-products}
-    \end{enunciado}
+  \begin{solucion}{Nombre3}
+    Esta es otra solución de prueba al mismo problema. 
+  \end{solucion}
+  
+  
+  % Funciones muy convexas
+  \begin{enunciado}{Mario Román}{Desigualdades}
+    Una función real $f$ se llama \textit{muy convexa} si cumple:
+    \begin{align*}
+      \frac{f(x)+f(y)}{2} & \geq  f\left(\frac{x+y}{2}\right) + |x - y|
+    \end{align*}
+    Demuestra que no existen funciones \textit{muy convexas}. \\
+    (Enunciado de José Luis Díaz-Barrero (UPC))
+  \end{enunciado}
 
-  \subsection{Insertion Sort Advanced Analysis}
-    \begin{enunciado}{Andrés Herrera}{Programación}
-      Problema en Hackerrank:
-     \url{https://www.hackerrank.com/challenges/insertion-sort}
-    \end{enunciado}
+  
+  
+  % Una desigualdad de olimpiadas de matemáticas
+  \begin{enunciado}{Mario Román}{Desigualdades}
+    Sean $a, b, c$ números positivos reales tales que $abc = 1$. Demuestra que:
+    \begin{gather*}
+      \frac{\left(\sqrt{a}+\sqrt{b}\right)^4}{a+b}+\frac{\left(\sqrt{b}+\sqrt{c}\right)^4}{b+c}+\frac{\left(\sqrt{c}+\sqrt{a}\right)^4}{c+a}\geq24
+    \end{gather*}
+    (Enunciado de José Luis Díaz-Barrero (UPC))
+  \end{enunciado}
+
+  
+  
+  % Problemas de Hackerrank
+  \begin{enunciado}{Andrés Herrera}{Programación}
+    Problema en Hackerrank:
+    \url{https://www.hackerrank.com/contests/infinitum-aug14/challenges/emma-and-sum-of-products}
+  \end{enunciado}
+
+  
+  
+  
+  \begin{enunciado}{Andrés Herrera}{Programación}
+    Problema en Hackerrank:
+    \url{https://www.hackerrank.com/challenges/insertion-sort}
+  \end{enunciado}
     
     
+  
+  % Un pequeño problema de álgebra  
+  \begin{enunciado}{Mario Román}{Álgebra}
+    Halla todas las funciones $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ cumpliendo
+    que si $A,B,C,D \in \mathbb{R}^2$ forman un cuadrado,
+    \begin{gather*}
+      f(A) + f(B) + f(C) + f(D) = 0
+    \end{gather*}
+  \end{enunciado}
+  
+  
+  % Un problema de álgebra que mandé a StackExchange
+  % ¡Las soluciones podéis mandarlas también allí!
+  \begin{enunciado}{Mario Román}{Álgebra}
+    Problema escrito en Math.StackExchange:
+    \url{http://math.stackexchange.com/questions/633985/is-fn-sum-k-0n-ak-bijective-in-mathbbz-m}
+  \end{enunciado}
+
 \end{document}
