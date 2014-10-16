@@ -52,7 +52,7 @@
 \usepackage{longtable}
 \usepackage{tabu}
 \usepackage{supertabular}
-
+\usepackage{xparse}
 \usepackage{multicol}
 \newsavebox\ltmcbox
 
@@ -165,9 +165,26 @@ Problemas planteados en el seminario} % Subtitle
 %----------------------------------------------------------------------------------------
 %  Definiciones de problemas
 %----------------------------------------------------------------------------------------
-\newcommand{\enunciado}{\texttt{Problema. }}
-\newcommand{\temas}{\flushright Temas: }
-\newcommand{\autor}{\flushright Autor: }
+\newcounter{solcounter}
+\renewcommand{\thesolcounter}{\arabic{solcounter}}
+
+\NewDocumentEnvironment{enunciado}{mm}{
+  \bfseries
+  \setcounter{solcounter}{0}
+}
+{\mdseries\itshape \begin{flushright} Autores: {#1} \\ Temas: {#2} \end{flushright}}
+
+
+\NewDocumentEnvironment{solucion}{m}{
+  \refstepcounter{solcounter}
+  \textsc{Solución \thesolcounter:} \\ \textit{Autores: {#1}} \bigskip \newline \noindent
+}
+{\begin{flushright}$\square$\end{flushright}}
+
+
+%----------------------------------------------------------------------------------------
+
+
 
 \begin{document}
 
@@ -186,22 +203,31 @@ Problemas planteados en el seminario} % Subtitle
   propuestos para los seminarios del doble grado.
 \end{abstract}
 {\parskip=2pt
-\tableofcontents
+  \tableofcontents
 }
 \pagebreak
 
 
 \section{Sesión de problemas 1}
 
+  % Este es un problema de prueba.
+  % Todos los problemas deberían seguir este mismo formato.
+  %  * El título del problema se coloca como título de subsección.
+  %  * El enunciado se deja dentro de su entorno \begin{enunciado}
+  %  * El autor y el tema se pasan como argumentos al enunciado
+  %  * La solución se deja dentro de su entorno \begin{solucion}
+  %  * El autor se pasa como argumento a la solución
   \subsection{Problema de prueba}
-    \enunciado
+    \begin{enunciado}{Nombre1, Nombre2}{Análisis}
       Este problema es de prueba. El resto de problemas deberán seguir este formato.
       \begin{gather*}
        \int^\infty_0 t^{x-1} e^{-t} dt
       \end{gather*}
-    \autor{Nombre del autor}
-    \temas{Meta}
-      
+    \end{enunciado}
+
+    \begin{solucion}{Nombre2}
+     Esta es una solución de prueba. 
+    \end{solucion}
 
 
 \end{document}
