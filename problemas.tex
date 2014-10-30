@@ -249,7 +249,56 @@ Problemas planteados en el seminario} % Subtitle
     Demuestra que no existen funciones \textit{muy convexas}. \\
     (Enunciado de José Luis Díaz-Barrero (UPC))
   \end{enunciado}
-
+  \begin{solucion}{Andrés Herrera Poyatos}
+  	La demostración se realizará por reducción al absurdo, suponemos que existe 
+  	una función $f: \mathbb{R} \rightarrow \mathbb{R}$ muy convexa y obtenemos
+  	una propiedad de la misma que contradice su existencia:
+  	\begin{theorem}
+  	    Sea $x \in \mathbb{R}$ y $n \in \mathbb{N}$. La función \textit{f} verifica:
+  	    \begin{equation*}
+  	        \frac{f(x+\lambda)+f(x-\lambda)}{2} \ge f(x) + 2n \lambda \ \ \forall \lambda > 0
+  	    \end{equation*}
+  	\end{theorem} 
+  	\begin{proof}
+  	    Sea $x \in \mathbb{R}$. La demostración se realizará por inducción sobre \textit{n}. 
+  	    Nótese que para cada $n\in\mathbb{N}$ debemos probar el enunciado para cualquier valor 
+  	    de $\lambda$.
+  	    
+  	    $\bullet$ Para $n=1$, sea $\lambda > 0$, utilizamos la definición de función muy convexa
+  	    obteniendo el resultado pretendido:
+  	    \begin{equation*}
+  	        \frac{f(x+\lambda)+f(x-\lambda)}{2} \geq  f(x) + 2\lambda
+  	    \end{equation*}
+  	    $\bullet$ Supongamos cierto el resultado para un $n \in \mathbb{N}$ y veamos que se verifica
+  	    para \textit{n+1}. Sea $\lambda > 0$, utilizamos la definición de función muy convexa para
+  	    obtener las dos siguientes desigualdades: 
+  	    \begin{equation*}
+  	        \frac{f(x+\lambda)+f(x)}{2} \geq  f\left(x+\frac{\lambda}{2}\right) + \lambda, \ \
+  	        \frac{f(x)+f(x-\lambda)}{2} \geq  f\left(x-\frac{\lambda}{2}\right) + \lambda
+  	    \end{equation*}
+  	    Sumando ambas desigualdades:
+  	    \begin{equation*}
+  	        f(x) + \frac{f(x+\lambda)+f(x-\lambda)}{2} \geq f\left(x+\frac{\lambda}{2}\right) +
+  	        f\left(x-\frac{\lambda}{2}\right) + 2\lambda
+  	    \end{equation*}
+  	    Aplicamos en el segundo miembro la hipótesis de inducción para $\frac{\lambda}{2}$:
+  	    \begin{equation*}
+  	        f\left(x+\frac{\lambda}{2}\right) + f\left(x-\frac{\lambda}{2}\right) + 2\lambda
+  	        \ge 2\left(f(x) + 2n\frac{\lambda}{2}\right) + 2\lambda = 2f(x) + 2(n+1)\lambda
+  	    \end{equation*}
+  	    Uniendo ambas desigualdades:
+  	    \begin{equation*}
+  	        f(x) + \frac{f(x+\lambda)+f(x-\lambda)}{2} \geq 2f(x) + 2(n+1)\lambda
+  	    \end{equation*}
+  	    Basta pasar $f(x)$ al otro miembro para obtener la igualdad deseada.
+  	\end{proof}
+  	Del teorema anterior se deduce rápidamente la no existencia de \textit{f}. Basta ver que,
+  	dados $x \in \mathbb{R}$ y $\lambda > 0$, el teorema implica que el conjunto
+  	$C = \lbrace{f(x) + 2n\lambda : n \in \mathbb{N}\rbrace}$ está mayorado por
+  	$\frac{f(x+\lambda)+f(x-\lambda)}{2}$, contradicción, pues es claro que \textit{C}
+  	no está mayorado.
+  \end{solucion}
+    
   
   
   % Una desigualdad de olimpiadas de matemáticas
