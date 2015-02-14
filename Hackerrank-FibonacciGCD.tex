@@ -169,11 +169,33 @@
 \begin{section}{Fibonacci  GCD}
 
 \begin{subsection}{Enunciado}
-content...
+Fibonacci numbers have the following form: 
+
+
+We have an array a1,a2,…,aN which contains N elements.
+
+
+Input Format 
+The first line contains N, where N denotes size of the array. 
+Each of the next N lines contains a number: the ith line contains ai.
+
+Output Format 
+Print a single integer — the remainder of the division of the resulting number by 109+7.
+
+Constraints 
+
 \end{subsection}
 
 \begin{subsection}{Solución}
-content...
+
+\begin{proposition}
+Sean $n, k \in \mathbb{N}$. Se tiene que $F_{k+n} = F_{k-1}F_n + F_k F_{n+1}$. 
+\end{proposition}
+
+\begin{proposition}
+Sean $n, k \in \mathbb{N}$. Se tiene que $\gcd(F_n, F_{k+n}) = gcd(F_n, F_k)$. 
+\end{proposition}
+
 \end{subsection}
 
 
