@@ -130,8 +130,8 @@
 % Portada:
 \newcommand{\titulo}{Fibonacci GCD}  % Título del trabajo.
 \newcommand{\fecha}{\today}                         % Fecha.
-\newcommand{\asignatura}{Seminarios DGIIM}                                         % Asignatura.
-\newcommand{\autor}{Óscar Bermúdez Garrido, Andrés Herrera Poyatos}                             % Autor.
+\newcommand{\asignatura}{Hackerrank}                                         % Asignatura.
+\newcommand{\autor}{Andrés Herrera Poyatos}                             % Autor.
 
 %----------------------------------------------------------------------------------------
 %	PORTADA 
@@ -161,8 +161,8 @@
 %\setcounter{tocdepth}{1}
 
 \newpage
-\tableofcontents
-\newpage
+%\tableofcontents
+%\newpage
 
 %----------------------------------------------------------------------------------------
 %	Problema
@@ -240,7 +240,7 @@
         $$ \gcd(F_{a_1}, \dots, F_{a_n}) = \gcd(\gcd(F_{a_1},F_{a_2}), F_{a_3}, \dots, F_{a_n}) = \gcd(F_{\gcd(a_1, a_2)}, F_{a_3}, \dots, F_{a_n}) $$
         Repetimos el proceso $n-1$ veces y usando la definición del máximo común divisor de $n$ elementos obtenemos el resultado.
     \end{proof}
-    
+
     \begin{algorithm}
         Dados $a_1, \dots, a_n \in \{1, \dots, 10^{12}\}$ con $n \in \{1, \dots, 2 10^5\}$. Realizamos el siguiente algoritmo:
         \begin{enumerate}
