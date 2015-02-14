@@ -108,10 +108,11 @@
 
 % Teoremas:
 \theoremstyle{theorem-style}  % Otras posibilidades: plain (por defecto), definition, remark
-\newtheorem{theorem}{Teorema}[section]  % [section] indica que el contador se reinicia cada sección
-\newtheorem{corollary}[theorem]{Corolario} % [theorem] indica que comparte el contador con theorem
-\newtheorem{lemma}[theorem]{Lema}
-\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{theorem}{Teorema}  % [section] indica que el contador se reinicia cada sección
+\newtheorem{corollary}{Corolario} % [theorem] indica que comparte el contador con theorem
+\newtheorem{lemma}{Lema}
+\newtheorem{proposition}{Proposición}
+\newtheorem{algorithm}{Algoritmo}
 % Definiciones, notas, conjeturas
 \theoremstyle{definition}
 \newtheorem{definition}{Definición}[section]
@@ -235,8 +236,11 @@
         $\gcd(F_{a_1}, \dots, F_{a_n}) = F_{gcd(a_1, \dots, a_n)}$. 
     \end{proposition}
     \begin{proof}
-        Usaremos que $\gcd(b_1, \dots, b_n) = \gcd( \gcd(b_1, b_2), b_3, \dots, b_n)$ para cualquier par de índices:
-        $$ \gcd(F_{a_1}, \dots, F_{a_n}) = \gcd(\gcd(F_{a_1},F_{a_2}), F_{a_3}, \dots, F_{a_n}) $$
+        Usaremos que $\gcd(b_1, \dots, b_n) = \gcd( \gcd(b_1, b_2), b_3, \dots, b_n)$:
+        $$ \gcd(F_{a_1}, \dots, F_{a_n}) = \gcd(\gcd(F_{a_1},F_{a_2}), F_{a_3}, \dots, F_{a_n}) = \gcd(F_{\gcd(a_1, a_2)}, F_{a_3}, \dots, F_{a_n}) $$
+        Repetimos el proceso $n-1$ veces y usando la definición del máximo común divisor de $n$ elementos obtenemos el resultado.
     \end{proof}
+    
+    
 
 \end{document}
