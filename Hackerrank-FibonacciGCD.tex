@@ -127,10 +127,10 @@
 %----------------------------------------------------------------------------------------
 
 % Portada:
-\newcommand{\titulo}{Título}  % Título del trabajo.
-\newcommand{\fecha}{1 \ de \ Enero \ de \ 2015}                         % Fecha.
-\newcommand{\asignatura}{Latex}                                         % Asignatura.
-\newcommand{\autor}{Andrés Herrera Poyatos}                             % Autor.
+\newcommand{\titulo}{Fibonacci GCD}  % Título del trabajo.
+\newcommand{\fecha}{\today}                         % Fecha.
+\newcommand{\asignatura}{Seminarios DGIIM}                                         % Asignatura.
+\newcommand{\autor}{Óscar Bermúdez Garrido, Andrés Herrera Poyatos}                             % Autor.
 
 %----------------------------------------------------------------------------------------
 %	PORTADA 
@@ -166,9 +166,7 @@
 %----------------------------------------------------------------------------------------
 %	Problema
 %----------------------------------------------------------------------------------------
-\begin{section}{Fibonacci  GCD}
-
-	\begin{subsection}{Enunciado}
+	\subsection{Enunciado}
 		Los números de Fibbonacci tienen la siguiente forma:
 		
 		\begin{center}
@@ -195,23 +193,15 @@
 			\item $1 \leq N \leq 2 \times 10^5$
 			\item $1 \leq a_i \leq 10^{12}$
 		\end{itemize} 
-	
-	\end{subsection}
+		
+\subsection{Solución}
 
-\begin{subsection}{Solución}
+	\begin{proposition}
+		Sean $n, k \in \mathbb{N}$. Se tiene que $F_{k+n} = F_{k-1}F_n + F_k F_{n+1}$. 
+	\end{proposition}
 
-\begin{proposition}
-Sean $n, k \in \mathbb{N}$. Se tiene que $F_{k+n} = F_{k-1}F_n + F_k F_{n+1}$. 
-\end{proposition}
-
-\begin{proposition}
-Sean $n, k \in \mathbb{N}$. Se tiene que $\gcd(F_n, F_{k+n}) = gcd(F_n, F_k)$. 
-\end{proposition}
-
-\end{subsection}
-
-
-\end{section}
-
+	\begin{proposition}
+		Sean $n, k \in \mathbb{N}$. Se tiene que $\gcd(F_n, F_{k+n}) = gcd(F_n, F_k)$. 
+	\end{proposition}
 
 \end{document}
