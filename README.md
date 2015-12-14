@@ -1,9 +1,14 @@
 Problemas
 =========
 
-Enunciados y soluciones de problemas planteados en los seminarios.
+Este repositorio contiene enunciados y soluciones de problemas de matemáticas e informática. Incluyendo ejercicios planteados en las asignaturas del doble grado y planteados en los seminarios.
 
-Los enunciados de los problemas deben escribirse en el entorno `enunciado`:
+### Markdown
+Puede usarse **markdown** para enunciar y resolver los problemas. Las fórmulas matemáticas pueden incluirse en un
+bloque con `$$`. Puede usarse una cabecera indicando autor y tema.
+
+### Latex
+Los enunciados de los problemas pueden escribirse en el entorno `enunciado`:
 ```latex
  \begin{enunciado}{Autores}{Temas}
  ...  
@@ -16,3 +21,6 @@ Y las soluciones a cada problema inmediatamente después del enunciado, en el en
  ...  
  \end{solucion}  
 ```
+
+### Código
+Los problemas pueden resolverse también en archivos de código específicos de cada lenguaje.
