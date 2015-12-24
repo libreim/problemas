@@ -1,7 +1,7 @@
 ---
 title: Ejercicios - Espacio topológico
 author: Diego Asterio de Zaballa
-source: Topologia, Rafael Lopez Camino
+source: Topología, Rafael Lopez Camino
 geometry: "a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm"
 fontsize: 10pt
 header-includes:
@@ -34,4 +34,13 @@ topología.
   
 ## b)
   
-  Para dar un ejemplo en el que la union de dos topologías no es una topología
+  Para dar un ejemplo en el que la unión de dos topologías no es una topología nos situamos en $ \mathbb{R} $ con dos 
+  topologías $ \tau_i = \tau ( \beta_i ) $ la topología generada por la base $ \beta_i = \{  ]\infty,a]: a \in 
+  \mathbb{R} \}$ también conocida como la topologia a izquierdas y la topologia a derechas $ \tau_d = \tau ( \beta_d ) $
+  generada por la base $ \beta_d = \{  [ b\infty [: b \in \mathbb{R} \} $ . En ella se ve claramente que $ \tau = \tau_i \cup \tau_d $
+  no es una topología. Tomamos $ O_1 = [a,\infty[ $ y $ O_2 = ]\infty,b] $ con a < b entonces $ O_1\capO_2=[a,b] \nin \tau $ 
+  y por tanto como la intersección finita de elementos del conjunto no permanece en el conjunto $\tau$ no es una topología.
+
+### Ejercicio 1.2
+
+  
