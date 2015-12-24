@@ -34,4 +34,4 @@ topología.
   
 ## b)
   
-  
+  Para dar un ejemplo en el que la union de dos topologías no es una topología
