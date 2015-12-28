@@ -43,4 +43,46 @@ topología.
 
 ### Ejercicio 1.2
 
+  Hallar todas las topologías que se pueden definir en un conjunto con tres elementos.
+  
+  Tomando un conjunto $X$ de tres elementos $X = {a,b,c}$ estas son las topologías que se pueden definir en el:
+  
+  1. La topología trivial
+  2. La topología discreta
+  3. $\tau = {{a},X,\emptyset}$
+  4. $\tau = {{a},{b},{a,b},X,\emptyset}$
+
+  (Como los elementos a,b y c son elementos cualesquiera las topologías tres y cuatro son equivalentes al resto de topologías que se puedan formar)
+  
+  
+  
+### Ejercicio 1.3
+
+  Se considera un conjunto $X$ y $A,B \in X$. Se define $\tau = {\emptyset,X,A,B}$. Determinar qué propiedades deben tener 
+  $A$ y $B$ para que $\tau$ sea una topología en $X$.
+  
+  Para que $\tau$ sea una topología $A$ y $B$ deben cumplir que tanto la unión como la interseccion este contenida en la propia topología.
+
+### Ejercicio 1.4 
+
+  Sea $X = {a,b,c,d}$ y $A = {a,b}$. Hallar todas las topologías que se pueden definir en $X$ de forma que $A$ sea un 
+  conjunto abierto y cerrado a la vez.
+  
+  Las topologías que se pueden definir en $X$ cumpliendo lo anterior son:
+  
+  1. La topologia discreta
+  2. $\tau = {{a,b},{c,d},X,\emptyset}$
+  3. $\tau = {{a},{b},{a,b},{c,d},{a,c,d},{b,c,d},X,\emptyset}$
+  4. $\tau = {{c},{d},{a,b},{c,d},{a,b,c},{a,b,d},X,\emptyset}$
+  
+### Ejercicio 1.5
+
+  Si $X = {a,b,c,d}$ es un conjunto, probar que $\tau = {\emptyset,X,{a},{a,b}}$ es una topología. Hallar el interior y la
+  adherencia de los conjuntos ${a,d}$ y ${b,c,d}$.
+  
+  Tanto $\emptyset$ como $X$ pertenecen al conjunto $\tau$. El número de elementos es finito y podemos comprobar casi de  
+  forma inmediata como la unión de cualquier familia de elementos de $\tau$ (${O_\alpha} \alpha \in \Lambda$) pertenece a 
+  $\tau$. Además la intersección de dos elementos cualesquiera del conjunto $\tau$ se encuentra en el mismo conjunto.
+  
+  
   
