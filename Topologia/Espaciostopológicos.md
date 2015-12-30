@@ -13,6 +13,8 @@ header-includes:
 Sea $X$ un conjunto y $\{ \tau_i : \in I \}$ una familia de topologías definida en $X$. Probar que $\bigcap_{ i \in I}\tau_i$ es una topología en $X$. Dar un ejemplo de la unión de dos topologías en un conjunto no tiene porqué ser una 
 topología.
 
+#### Solución
+
 ## a)
   
   Para verificar que el conjunto $\bigcap_{ i \in I} \tau_i$ es una topología en $X$ este debe verificar tres propiedades:
@@ -42,6 +44,8 @@ topología.
 
   Hallar todas las topologías que se pueden definir en un conjunto con tres elementos.
   
+#### Solución
+  
   Tomando un conjunto $X$ de tres elementos $X = \{a,b,c\}$ estas son las topologías que se pueden definir en el:
   
   1. La topología trivial
@@ -57,6 +61,8 @@ topología.
 
   Se considera un conjunto $X$ y $A,B \in X$. Se define $\tau = \{\emptyset,X,A,B\}$. Determinar qué propiedades deben tener $A$ y $B$ para que $\tau$ sea una topología en $X$.
   
+#### Solución
+
   Para que $\tau$ sea una topología $A$ y $B$ deben cumplir que tanto la unión como la interseccion este contenida en la propia topología.
 
 ### Ejercicio 1.4 
@@ -64,6 +70,8 @@ topología.
   Sea $X = \{a,b,c,d\}$ y $A = \{a,b\}$. Hallar todas las topologías que se pueden definir en $X$ de forma que $A$ sea un 
   conjunto abierto y cerrado a la vez.
   
+#### Solución
+
   Las topologías que se pueden definir en $X$ cumpliendo lo anterior son:
   
   1. La topologia discreta
@@ -74,7 +82,9 @@ topología.
 ### Ejercicio 1.5
 
   Si $X = \{a,b,c,d\}$ es un conjunto, probar que $\tau = \{\emptyset,X,\{a\},\{a,b\}\}$ es una topología. Hallar el interior y la adherencia de los conjuntos $\{a,d\}$ y $\{b,c,d\}$.
-  
+ 
+#### Solución
+
   Tanto $\emptyset$ como $X$ pertenecen al conjunto $\tau$. El número de elementos es finito y podemos comprobar casi 
   de forma inmediata como la unión de cualquier familia de elementos de $\tau$ ($\{O_\alpha\} \alpha \in \Lambda$) pertenece
   a $\tau$. Además la intersección de dos elementos cualesquiera del conjunto $\tau$ se encuentra en el mismo conjunto.
@@ -89,3 +99,13 @@ topología.
   $n \in \mathbb{N}$ con el menor número posible de entornos. Hallar el interior y la adherencia de los conjuntos $A = {2n 
   : n \in \mathbb{N}}$ y $B = \{4,5\}$. 
   
+#### Solución
+
+  Cualquier número natural o es irreducible o se puede dividir por otro número natural por lo tanto $\mathbb{N} \in \tau$ y de forma trivial $\emptyset \in \tau$. Asi la primera propiedad para que $\tau$ sea una topología se cumple.
+
+  En segundo lugar si tomamos una familia de conjuntos $\{O_\alpha\} \alpha \in \Lambda$ perteneciente a $\tau$ para todo $n \in \bigcup_{\alpha \in \Lambda}O_\alpha$ estan sus divisores por estar para algún $\alpha$. 
+
+  Y por último sean $O_1, O_2 \in \tau$ para cualquier $n \in O_i i=1 \vee i=2$ por la propiedad que cumplen todos los abiertos estan todos sus divisores de modo que $\forall n \in O_1 \cap \O_2$ estan los divisores de $n$ por estar tanto en $O_1$ como en $O_2$. Asi se cumple que $O_1 \cap O_2$ pertenece al conjunto $\tau$.
+
+  $A = \{2n : n \in \mathbb{N}\}$ sea $x$ un elemento de $A$ el conjunto $D_x = \{ divisores de x \}$ es el unico conjunto dentro de $\tau$ que cumple $D_x \in \mathcal{U}$  asi solo si $D_x \subset A$ podemos decir que $x$ es un punto interior de $A$ de modo que $int(A) = \{ 2p : p = 2^n\}$ para algún $n$. $\overline{A} = A \cup Fr(A)$ asi que para saber la adherencia sólo necesitamos saber la frontera del conjunto $A$.
+
