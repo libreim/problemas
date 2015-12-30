@@ -58,8 +58,7 @@ topología.
   
 ### Ejercicio 1.3
 
-  Se considera un conjunto $X$ y $A,B \in X$. Se define $\tau = {\emptyset,X,A,B}$. Determinar qué propiedades deben tener 
-  $A$ y $B$ para que $\tau$ sea una topología en $X$.
+  Se considera un conjunto $X$ y $A,B \in X$. Se define $\tau = {\emptyset,X,A,B}$. Determinar qué propiedades deben tener $A$ y $B$ para que $\tau$ sea una topología en $X$.
   
   Para que $\tau$ sea una topología $A$ y $B$ deben cumplir que tanto la unión como la interseccion este contenida en la propia topología.
 
@@ -77,12 +76,19 @@ topología.
   
 ### Ejercicio 1.5
 
-  Si $X = {a,b,c,d}$ es un conjunto, probar que $\tau = {\emptyset,X,{a},{a,b}}$ es una topología. Hallar el interior y la
-  adherencia de los conjuntos ${a,d}$ y ${b,c,d}$.
+  Si $X = {a,b,c,d}$ es un conjunto, probar que $\tau = {\emptyset,X,{a},{a,b}}$ es una topología. Hallar el interior y la adherencia de los conjuntos ${a,d}$ y ${b,c,d}$.
   
-  Tanto $\emptyset$ como $X$ pertenecen al conjunto $\tau$. El número de elementos es finito y podemos comprobar casi de  
-  forma inmediata como la unión de cualquier familia de elementos de $\tau$ (${O_\alpha} \alpha \in \Lambda$) pertenece a 
-  $\tau$. Además la intersección de dos elementos cualesquiera del conjunto $\tau$ se encuentra en el mismo conjunto.
+  Tanto $\emptyset$ como $X$ pertenecen al conjunto $\tau$. El número de elementos es finito y podemos comprobar casi 
+  de forma inmediata como la unión de cualquier familia de elementos de $\tau$ (${O_\alpha} \alpha \in \Lambda$) pertenece
+  a $\tau$. Además la intersección de dos elementos cualesquiera del conjunto $\tau$ se encuentra en el mismo conjunto.
   
+  El interior de los conjuntos ${a,d}$ y ${b,c,d}$ es $Int({a,d}) = {a}$ y $Int({b,c,d}) = \emptyset$ y la adherencia es $\overline{{a,d}}={a,d}\cupFr({a,d})={a,d}\cup{b,c,d}=X$ y $\overline{{b,c,d}}={b,c,d}\cupFr({b,c,d})={b,c,d}\cup{b,c,d}={b,c,d}$
   
+### Ejercicio 1.6
+  
+  En $\mathbb{N}$ se define la siguiente familia $\tau$ de subconjuntos. Un conjunto $O \in \mathbb{N}$ pertenece a $\tau$ 
+  si satisface la siguiente propiedad: "si $n\in O$, entonces todos los divisores de $n$ pertenecen a $O$". Probar que   
+  $\tau$ define una topología en $\mathbb{N}$ llamada *topología de los divisores*. Hallar una base de entornos para cada 
+  $n \in \mathbb{N}$ con el menor número posible de entornos. Hallar el interior y la adherencia de los conjuntos $A = {2n 
+  : n \in \mathbb{N}$ y $B = {4,5}$. 
   
